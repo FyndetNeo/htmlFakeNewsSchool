@@ -1,0 +1,59 @@
+.section-wrapper .section {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+}
+.section-wrapper button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.section-wrapper .section-one {
+  background-color: lightgray;
+}
+.section-wrapper .section-one p {
+  font-size: 60px;
+}
+.section-wrapper .section-two p,
+.section-wrapper .section-four p,
+.section-wrapper .section-five p {
+  font-size: 20px;
+}
+.section-wrapper .section-two .image-2,
+.section-wrapper .section-four .image-2,
+.section-wrapper .section-five .image-2 {
+  width: 300px;
+  height: 300px;
+  margin-right: 6rem;
+}
+.section-wrapper .section-three {
+  background-color: lightgray;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.section-wrapper .section-three img {
+  width: 50px;
+  height: 50px;
+}
+.section-wrapper .section-three p {
+  font-size: 20px;
+}
+.section-wrapper .section-three-numbers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.section-wrapper .section-five {
+  background-color: lightgray;
+}
+.section-wrapper .section-five img {
+  margin-left: 6rem;
+}
+
+/*# sourceMappingURL=test.css.map */
