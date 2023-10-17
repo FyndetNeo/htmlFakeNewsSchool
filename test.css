@@ -10,6 +10,7 @@
   color: white;
 }
 .header-wrapper ul .logo img {
+  margin-left: 3rem;
   height: 50px;
   width: 50px;
 }
@@ -40,13 +41,16 @@
 .header-wrapper .signup:hover {
   background-color: #5dc65f;
 }
+.header-wrapper .user {
+  margin-right: 5rem;
+}
 .header-wrapper .login {
   color: #4DAE50;
   margin-right: 1rem;
 }
 .header-wrapper .header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 body {
@@ -150,7 +154,7 @@ body .section-wrapper .section-six .faq-teaser {
 }
 body .section-wrapper .section-six .faq-teaser-wrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 body .section-wrapper .section-six .faq-teaser p {
   color: #4CAF50;
@@ -222,6 +226,12 @@ footer select {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+}
+
+@media screen and (max-width: 720px) {
+  .section-wrapper .section-six .faq-teaser-wrapper {
+    flex-direction: row;
+  }
 }
 
 /*# sourceMappingURL=test.css.map */
