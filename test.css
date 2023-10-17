@@ -1,4 +1,7 @@
 .header-wrapper ul {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
   list-style-type: none;
   margin: 0;
   padding: 10px;
@@ -79,6 +82,7 @@ body .section-wrapper button:hover {
 }
 body .section-wrapper .section-one {
   background-color: lightgray;
+  padding-top: 7rem;
 }
 body .section-wrapper .section-one p {
   font-size: 60px;
