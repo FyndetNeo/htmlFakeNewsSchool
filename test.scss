@@ -1,13 +1,25 @@
+body {
+  background-color: white;
+  margin: 0;
+}
+
 .section-wrapper {
+  .alternative-headline {
+    color: #4CAF50;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
   .section {
-    padding: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    padding: 4rem;
+    display: flex;
     justify-content: space-between;
   }
 
-   button {
-    background-color: #4CAF50; /* Green */
+  button {
+    background-color: #4CAF50;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -15,6 +27,13 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+
+  button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   }
 
   .section-one {
@@ -23,8 +42,13 @@
     p {
       font-size: 60px;
     }
-  }
 
+    img {
+      width: 30rem;
+      height: 20rem;
+      border-radius: 30px;
+    }
+  }
 
   .section-two,
   .section-four,
@@ -42,22 +66,36 @@
 
   .section-three {
     background-color: lightgray;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    img {
-      width: 50px;
-      height: 50px;
-    }
-
-    p {
-      font-size: 20px;
-    }
+    display: flex;
 
     &-numbers {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
+      gap: 10px;
+      margin-right: 10rem;
+      font-size: 20px;
+
+      .section-three-numbers-1,
+      .section-three-numbers-2,
+      .section-three-numbers-3,
+      .section-three-numbers-4 {
+        display: flex;
+        align-items: center;
+      }
+
+      img {
+        width: 80px;
+        height: 80px;
+        margin-right: 1rem;
+      }
+    }
+  }
+
+
+  .section-four {
+    img {
+      transform: rotate(-25deg);
     }
   }
 
@@ -68,5 +106,55 @@
       margin-left: 6rem;
     }
   }
-}
 
+  .section-six {
+    padding: 4rem;
+    text-align: center;
+
+    .faq-teaser {
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+
+      &-wrapper {
+        display: flex;
+        flex-direction: row;
+      }
+
+      p {
+        color: #4CAF50;
+      }
+
+      &-box {
+        background-color: #e7e4e4;
+        margin-inline: 2rem;
+        padding: 0.5rem 4rem;
+        border-radius: 10px;
+        position: absolute;
+        bottom: -20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+      }
+
+      img {
+        width: 400px;
+        height: 300px;
+        border-radius: 20px;
+      }
+
+      h3 {
+        font-size: 24px;
+        margin: 10px 0;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+
+}
