@@ -2,17 +2,18 @@
 body {
   --color-primary: #4CAF50;
   --color-secondary: #263139;
+  --color-white: white;
+  --bg-color-dark: lightgray;
   --headline-font-size: 2.5rem;
   --p-font-size: 1rem;
-  --bg-color-dark: lightgray;
-  background-color: white;
+  background-color: var(--color-white);
   margin: 0;
   overflow-x: hidden;
 }
 body button {
   background-color: var(--color-primary);
   border: none;
-  color: white;
+  color: var(--color-white);
   padding: 1rem 1.6rem;
   text-align: center;
   text-decoration: none;
@@ -28,7 +29,10 @@ body nav .navbar {
   width: 100%;
   background-color: var(--color-secondary);
   position: fixed;
+  padding-right: 1rem;
   z-index: 1;
+  display: flex;
+  justify-content: space-between;
 }
 body nav .container {
   max-width: 1050px;
@@ -44,7 +48,7 @@ body nav .nav-buttons button {
   width: 110px;
 }
 body nav .nav-buttons .nav-button-sing-up button {
-  background-color: white;
+  background-color: var(--color-white);
   color: var(--color-primary);
 }
 body nav .menu-items {
@@ -60,7 +64,7 @@ body nav .nav-container li {
 }
 body nav .nav-container a {
   text-decoration: none;
-  color: white;
+  color: var(--color-white);
   font-weight: 500;
   font-size: 1.5rem;
   padding: 0.2rem;
@@ -101,16 +105,16 @@ body nav .nav-container .hamburger-lines .line {
   background: #0e2431;
 }
 body nav .nav-container .hamburger-lines .line1 {
-  background-color: white;
+  background-color: var(--color-white);
   transform-origin: 0% 0%;
   transition: transform 0.4s ease-in-out;
 }
 body nav .nav-container .hamburger-lines .line2 {
-  background-color: white;
+  background-color: var(--color-white);
   transition: transform 0.2s ease-in-out;
 }
 body nav .nav-container .hamburger-lines .line3 {
-  background-color: white;
+  background-color: var(--color-white);
   transform-origin: 0% 100%;
   transition: transform 0.4s ease-in-out;
 }
@@ -128,13 +132,6 @@ body nav .navbar .menu-items li {
   margin-bottom: 2rem;
   font-size: 1.5rem;
   font-weight: 500;
-}
-body nav .logo {
-  position: absolute;
-  top: 5px;
-  right: 15px;
-  font-size: 1.2rem;
-  color: #0e2431;
 }
 body nav .nav-container input[type=checkbox]:checked ~ .menu-items {
   transform: translateX(0);
@@ -307,7 +304,7 @@ body .section-wrapper .section-six .faq-teaser span {
 
 .footer {
   background-color: #263139;
-  color: white;
+  color: var(--color-white);
   padding: 2rem 4rem;
   display: grid;
 }
@@ -325,9 +322,8 @@ body .section-wrapper .section-six .faq-teaser span {
 }
 .footer a {
   display: block;
-  color: white;
+  color: var(--color-white);
   text-decoration: none;
-  font-family: "Roboto";
 }
 .footer input[type=email],
 .footer select {
@@ -374,39 +370,38 @@ body .section-wrapper .section-six .faq-teaser span {
     padding: 10px;
     overflow: hidden;
     background-color: #263139;
-    color: white;
+    color: var(--color-white);
   }
   body .nav-desktop ul .logo img {
     margin-left: 3rem;
     height: 50px;
     width: 50px;
   }
-  body .nav-desktop ul .user {
+  body .nav-desktop ul .nav-buttons {
     margin-right: 5rem;
   }
-  body .nav-desktop ul .user .signup {
-    background-color: #4DAE50;
+  body .nav-desktop ul .nav-buttons .signup {
+    background-color: var(--color-white);
     border-radius: 5px;
-    color: white;
+    color: var(--color-white);
     transition: transform 0.4s ease-in-out;
     text-decoration: none;
   }
-  body .nav-desktop ul .user .signup:hover {
+  body .nav-desktop ul .nav-buttons .signup:hover {
     background-color: #82C684;
-    color: white;
+    color: var(--color-white);
     transform: translatey(-5px);
   }
-  body .nav-desktop ul .user .login {
-    background-color: white;
+  body .nav-desktop ul .nav-buttons .login {
     border-radius: 5px;
     color: var(--color-primary);
     margin-right: 1rem;
     transition: transform 0.4s ease-in-out;
     text-decoration: none;
   }
-  body .nav-desktop ul .user .login:hover {
+  body .nav-desktop ul .nav-buttons .login:hover {
     background-color: #82C684;
-    color: white;
+    color: var(--color-white);
     transform: translatey(-5px);
   }
   body .nav-desktop ul li {
@@ -414,12 +409,10 @@ body .section-wrapper .section-six .faq-teaser span {
   }
   body .nav-desktop ul li a {
     display: block;
-    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: underline;
-    font-family: "Roboto";
-    color: white;
+    color: var(--color-white);
   }
   body .nav-desktop ul li a:hover {
     color: var(--color-primary);

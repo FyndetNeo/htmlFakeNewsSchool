@@ -1,19 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head>
+<header>
     <title>FaKe News Phenomenon</title>
     <link rel="stylesheet" href="test.css">
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</header>
 
 <body>
 <nav>
     <div class="navbar">
-        <div class="logo">
-            <a href="#">
-                <img src="images/section-3-studentshat-white.svg">
-            </a>
-        </div>
-
         <div class="container nav-container">
             <input class="checkbox" type="checkbox" name="" id=""/>
             <div class="hamburger-lines">
@@ -42,6 +37,11 @@
                 </div>
             </div>
         </div>
+        <div class="logo">
+            <a href="#">
+                <img src="images/section-3-studentshat-white.svg">
+            </a>
+        </div>
     </div>
     <script src="navigation.js"></script>
 </nav>
@@ -60,9 +60,14 @@
             <li><a href="#scene-stop">Scene-Stop</a></li>
             <li><a href="#faq">FAQ</a></li>
         </div>
-        <div class="user">
-            <li style="float:right"><a class="active signup" href="#signUp">Sign up</a></li>
-            <li style="float:right"><a class="active login" href="#login">Login</a></li>
+        <div class="nav-buttons">
+            <a class="login" href="#signUp">
+                <button>Sign up</button>
+            </a>
+
+            <a class="signup" href="#login">
+                <button>Login</button>
+            </a>
         </div>
     </ul>
 </div>
