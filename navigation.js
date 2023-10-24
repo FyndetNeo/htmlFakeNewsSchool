@@ -11,3 +11,11 @@ checkbox.addEventListener('change', function () {
         navbar.classList.remove('menu-open');
     }
 });
+
+body.addEventListener('click', function (event) {
+    if (!navbar.contains(event.target) && checkbox.checked) {
+        checkbox.checked = false;
+        body.style.overflow = 'auto';
+        navbar.classList.remove('menu-open');
+    }
+});
