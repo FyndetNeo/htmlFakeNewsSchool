@@ -129,7 +129,6 @@ body .section-wrapper .section-two {
 }
 
 body .section-one {  /*does nothing for some reason, needs fix to align text in center */
-  display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
@@ -160,7 +159,7 @@ body .section-two .gameFalse{
 }
 
 body .section-two .gameResult{
-  
+  padding: 10px;
 }
 
 footer .footer {
@@ -214,7 +213,7 @@ footer select {
   }
   body .section-wrapper .section-one {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
   body .section-wrapper .section-one img {
     order: 1;
