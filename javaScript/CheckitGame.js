@@ -7,27 +7,38 @@ const articles = [
 ];
 
 let outputText = document.getElementById("gameResultText");
-const trueButton = document.getElementById("trueButton");
+let feedbackTrue = document.getElementById("feedback-valid")
+let feedbackFalse = document.getElementById("feedback-invalid")
+const trueButton = document.getElementById("trueButton");   
 const falseButton = document.getElementById("falseButton");
 
 trueButton.addEventListener("click", function() {
+    clearFeedbackText();
     checkReal(true);
 });
 
 falseButton.addEventListener("click", function() {
+    clearFeedbackText();
     checkReal(false);
 });
  
 function gameTrueAlert() {
-    alert("Your answer was correct.");
+    feedbackTrue.style.display = 'inline';
+    feedbackTrue.textContent = "Your last Answer was correct.";
     score++;
     outputText.textContent = "Your score is: " + score;
 }
 
 function gameFalseAlert() {
-    alert("Your answer was incorrect.");
+    feedbackFalse.style.display = 'inline';
+    feedbackFalse.textContent = "Your last Answer was incorrect.";
     score--;
     outputText.textContent = "Your score is: " + score;
+}
+
+function clearFeedbackText() {
+    feedbackFalse.style.display = 'none';
+    feedbackTrue.style.display = 'none';
 }
 
 function setArticle(){
