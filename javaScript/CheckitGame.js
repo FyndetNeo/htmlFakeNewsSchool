@@ -1,6 +1,7 @@
-let score = 0;
-let currentArticle;
-const articles = [
+let score = 0; //initialize game score
+let currentArticle; 
+let lastSelectedIndex = -1; //initialize Index for later use in selecting the article
+const articles = [ //structure to assign articles and whether they are true or false
   {
     text: "Studies have recently discovered that drinking excessive amounts of energy drinks is actually good! Buy DRINK",
     isTrue: false,
@@ -53,21 +54,26 @@ function clearFeedbackText() {
 }
 
 function setArticle() {
-  const randomIndex = Math.floor(Math.random() * articles.length); //assign a random Index within the array length of "articles"
-  const article = articles[randomIndex]; //Select the article that was chosen via randomIndex
-  const paragraph = document.createElement("p"); //create the paragraph element to be filled with the article
-  paragraph.textContent = article.text; //assign article text to the paragraph
-  const gameArticleContainer = document.querySelector(".gameArticle"); //selects HTML element
-  gameArticleContainer.innerHTML = ""; //initialize text
-
-  while (gameArticleContainer.firstChild) {
-    //stops same article from being selected twice by removing it from the array then appending it again, does not work becaues I got lazy
-    gameArticleContainer.removeChild(gameArticleContainer.firstChild);
-  }
-
-  gameArticleContainer.appendChild(paragraph);
-  currentArticle = article;
+  
+    do {
+      randomIndex = Math.floor(Math.random() * articles.length); //select a random index of the articles array
+    } while (randomIndex === lastSelectedIndex); //prevents same article from being selected twice
+  
+    lastSelectedIndex = randomIndex;
+  
+    const article = articles[randomIndex]; //selects article according to randomly rolled index
+  
+    const gameArticleContainer = document.querySelector(".gameArticle"); //replace gameArticle content
+    gameArticleContainer.innerHTML = ""; // Clear previous content
+  
+    const paragraph = document.createElement("p"); //insert paragraph for correct textformatting
+    paragraph.textContent = article.text; //replace text with randomly selected article
+  
+    gameArticleContainer.appendChild(paragraph);
+    currentArticle = article;
 }
+  
+
 
 function checkReal(userAnswer) {
   if (userAnswer === currentArticle.isTrue) {
