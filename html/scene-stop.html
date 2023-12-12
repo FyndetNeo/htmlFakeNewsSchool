@@ -3,7 +3,8 @@
 
 <head>
     <title>Scene-stop</title>
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="/css/scene-stop.css">
+    <script type="text/javascript" src="/javaScript/scene-stop.js" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -81,10 +82,17 @@
     <div class="section-wrapper">
 
         <div class="section section-one">
-        </div>
+            <h2>Scene-stop game</h2>
+            <div class="videoWrapper">
+            <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+                <div id="player"></div>
+                </div>
+            </div>
 
         <div class="section section-two">
-            <div>
+            <div class="button-container">
+                <button class="gameOpt1" id="opt1Button">Option 1</button>
+                <button class="gameOpt2" id="opt2Button">Option 2</button>
             </div>
         </div>
 
