@@ -8,6 +8,8 @@ body {
   background-color: var(--color-white);
   margin: 0;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
 }
 body button {
   background-color: var(--color-primary);
@@ -303,6 +305,7 @@ body .section-wrapper .section-six .faq-teaser span {
 }
 body .footer {
   background-color: var(--color-secondary);
+  justify-self: end;
   color: var(--color-white);
   padding: 2rem 4rem;
   display: grid;
