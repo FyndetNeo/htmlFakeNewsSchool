@@ -104,11 +104,14 @@ body .section-one {
   align-items: center;
 }
 
+body .section-two #feedback-wrapper {
+  margin: 1rem 5rem;
+}
+
 body .section-two #feedback-valid {
   background-color: green;
   padding: 10px;
   border-radius: 10px;
-  margin: 1rem;
   display: none;
 }
 
@@ -116,7 +119,6 @@ body .section-two #feedback-invalid {
   background-color: red;
   padding: 10px;
   border-radius: 10px;
-  margin: 1rem;
   display: none;
 }
 
