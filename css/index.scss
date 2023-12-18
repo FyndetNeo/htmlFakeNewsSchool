@@ -1,11 +1,13 @@
-body {
+* {
   --color-primary: #4CAF50;
   --color-secondary: #263139;
   --color-white: white;
   --bg-color-grey: lightgray;
   --headline-font-size: 2rem;
   --p-font-size: 1rem;
+}
 
+body {
   background-color: var(--color-white);
   margin: 0;
   overflow-x: hidden;
@@ -367,6 +369,16 @@ body {
         }
       }
     }
+  }
+
+  .background-white {
+    background-color: white;
+    color: black;
+  }
+
+  .background-dark {
+      background-color: #333;
+      color: white;
   }
 
   .footer {

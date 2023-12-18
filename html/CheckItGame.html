@@ -2,13 +2,14 @@
 <html>
 
 <head>
-    <title>Scene-stop</title>
-    <link rel="stylesheet" href="/css/scene-stop.css">
-    <script type="text/javascript" src="/javaScript/scene-stop.js" defer></script>
+    <title>Check It</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/CheckItGame.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="../javaScript/CheckitGame.js" defer></script>
 </head>
 
-<body style="min-height: 100vh; position:relative">
+<body>
     <div class="nav-wrapper">
         <nav>
             <div class="navbar">
@@ -82,22 +83,42 @@
     <div class="section-wrapper">
 
         <div class="section section-one">
-            <div class="videoWrapper">
-            <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-                <div id="player"></div>
-                </div>
-            </div>
+            <h2>Check-It-game</h2>
+        </div>
 
         <div class="section section-two">
-            <div class="button-container">
-                <button class="gameOpt1" id="opt1Button">Option 1</button>
-                <button class="gameOpt2" id="opt2Button">Option 2</button>
+            <div>
+                <h3>Artikel</h3>
+                <div class="gameArticle">
+                </div>
+
+                <div id="feedback-wrapper">
+
+
+                    <div id="feedback-valid">
+                        test
+                    </div>
+
+                    <div id="feedback-invalid">
+                        test
+                    </div>
+                </div>
+
+                <div class="button-container">
+                    <button class="gameFalse" id="falseButton">Fake</button>
+                    <button class="gameTrue" id="trueButton">Real</button>
+                </div>
+
+                <div class="gameResult">
+                    <p id="gameResultText"> Your score is: 0
+                    </p> <!--placeholder, remove later with dynamic game elements-->
+                </div>
             </div>
         </div>
 
 
     </div>
-    <div style="flex-grow: 1;"></div>
+
     <div class="footer">
         <div class="left">
             <h2>Company</h2>
